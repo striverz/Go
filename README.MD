@@ -2,7 +2,7 @@
 
 ## [Golang Cohort Link ](https://petal-estimate-4e9.notion.site/Golang-cohort-1257dfd1073580238258fe25973c319b)
 
-## Go Semicolon Rules
+## Go Semicolon Rules --- Quick Notes 📝
 
 ### 1. Automatic Semicolons
 
@@ -34,3 +34,67 @@ You **must add semicolons manually**:
 ```go
 x := 5; y := 10; fmt.Println(x + y)
 ```
+
+## Go Variables --- Quick Notes 📝
+
+Variables in Go can be declared in **three main ways**.
+
+---
+
+## 1. Using `var` with Type (Explicit Declaration)
+
+```go
+var name string = "Manikanta Korimilli"
+fmt.Println(name)
+fmt.Printf("The type: %T\n", name)
+```
+
+- Declares a variable **with a fixed type**.
+- You **must** assign the value at declaration.
+
+---
+
+## 2. Using `var` without Type (Type Inference)
+
+```go
+var totalAmount = 40
+fmt.Println(totalAmount)
+fmt.Printf("The type: %T\n", totalAmount)
+```
+
+- Go **infers the type** automatically based on the value.
+
+---
+
+## 3. Using `:=` Operator (Short Variable Declaration)
+
+```go
+isLoggin := true
+fmt.Println(isLoggin)
+fmt.Printf("The type: %T\n", isLoggin)
+```
+
+- Works **only inside functions**.
+
+---
+
+## 4. Constants in Go
+
+```go
+const apiKey = "69:69"
+fmt.Println(apiKey)
+fmt.Printf("The type: %T\n", apiKey)
+```
+
+- Use `const` for values that **never change**.
+- Constants **must** be assigned when declared.
+
+---
+
+## Key Takeaways ✅
+
+- **`var name string = "Go"`** → Declare variable **with type**.
+- **`var name = "Go"`** → Go **infers type** automatically.
+- **`name := "Go"`** → Short variable declaration (**inside functions
+  only**).
+- **`const apiKey = "12345"`** → Declare a constant.
