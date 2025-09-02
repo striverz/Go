@@ -98,3 +98,9 @@ fmt.Printf("The type: %T\n", apiKey)
 - **`name := "Go"`** → Short variable declaration (**inside functions
   only**).
 - **`const apiKey = "12345"`** → Declare a constant.
+
+## [userInput](/03userinput/main.go)
+
+## [conversion](/04conversion/main.go)
+
+## [Time](/05learn/main.go)
