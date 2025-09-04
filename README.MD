@@ -106,3 +106,7 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [Time](/05learn/main.go)
 
 ## [Pointers](/06mypointers/main.go)
+
+## [Arrays](/07myarrays/main.go)
+
+## [Slices](/08myslices/main.go)
