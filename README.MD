@@ -104,3 +104,5 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [conversion](/04conversion/main.go)
 
 ## [Time](/05learn/main.go)
+
+## [Pointers](/06mypointers/main.go)
