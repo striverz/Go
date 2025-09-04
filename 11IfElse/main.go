@@ -25,5 +25,25 @@ func main(){
 		fmt.Println("Number is greater than 10")
 	}
 
+
+	//Method-03(switch case)
+
+	value:=1
+
+	switch value{
+	case 1:
+		fmt.Println("sunday")
+	case 2:
+		fmt.Println("monday")
+	case 3:
+		fmt.Println("tuesday")
+	default:
+		fmt.Println("MgDay")
+	}
+
+	//use fallthrough for executing the next statement as well
+	
+
+
 	
 }
