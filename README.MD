@@ -114,3 +114,7 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [Maps](/09mymaps/main.go)
 
 ## [Structs](/10mystructs/main.go)
+
+## [IfElse](/11IfElse/main.go)
+
+## [Loops](/12Loops/main.go)
