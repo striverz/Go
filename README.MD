@@ -110,3 +110,7 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [Arrays](/07myarrays/main.go)
 
 ## [Slices](/08myslices/main.go)
+
+## [Maps](/09mymaps/main.go)
+
+## [Structs](/10mystructs/main.go)
