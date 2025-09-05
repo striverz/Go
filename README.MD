@@ -120,3 +120,5 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [Loops](/12Loops/main.go)
 
 ## [Functions](/13Functions/main.go)
+
+## [Methods](/14Methods/main.go)
