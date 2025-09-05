@@ -124,3 +124,5 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [Methods](/14Methods/main.go)
 
 ## [Defter](/15Defer/main.go)
+
+## [File Operations](/16Files/main.go)
