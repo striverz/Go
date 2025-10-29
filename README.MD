@@ -128,3 +128,11 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [File Operations](/16Files/main.go)
 
 ## [Web Requests](/17WebRequests/main.go)
+
+## [URL Handling](/18HandlingURL/main.go)
+
+## [Get Request](/20GetRequest/main.go)
+
+## [Post Request](/21PostRequest/main.go)
+
+## [Post Form Request](/22PostFormRequest/main.go)
