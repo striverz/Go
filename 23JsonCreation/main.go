@@ -16,10 +16,13 @@ type course struct{
 func main(){
 	fmt.Println("Json Creation In Go")
 	EncodeJson()
+	DecodeJson()
 }
 
 
 func EncodeJson(){
+
+	fmt.Println("Encoding of Json")
 
 	myCourses:=[]course{
 		{"tuf+",100,"Tuf","123",[]string{"coding","strive","lld"}},{"tle",50,"TLE","321",nil},
@@ -35,4 +38,37 @@ func EncodeJson(){
 
 
 
+}
+
+
+func DecodeJson(){
+
+
+	fmt.Println("Decoding of Json")
+
+	jsonDataFromWeb:=[]byte(`
+	{
+                "course_name": "tuf+",
+                "price_value": 100,
+                "platform": "Tuf",
+                "tags": [
+                        "coding",
+                        "strive",
+                        "lld"
+                ]
+        }`)
+	
+	var myCourses course
+	checkValid:=json.Valid(jsonDataFromWeb)
+
+	if checkValid{
+		fmt.Println("Valid Json Data")
+		json.Unmarshal(jsonDataFromWeb,&myCourses)
+		fmt.Printf("%#v\n",myCourses)
+
+	}else{
+		fmt.Println("Invalid Json Data")
+	}
+
+	
 }
