@@ -43,9 +43,11 @@ func PerformPostRequest(){
 	fmt.Println(response.ContentLength)
 	fmt.Println(response.Status)
 	
+	
 
 	content,_:=io.ReadAll(response.Body)
 
+	//Request Body 
 	fmt.Println(string(content))
 	 
 }
