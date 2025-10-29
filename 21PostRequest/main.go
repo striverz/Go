@@ -18,13 +18,13 @@ func main(){
 func PerformPostRequest(){
 	const url="http://localhost:6969/post"
 
-
+    
+	//Making Dummy Json Data
 	responseBody:=strings.NewReader(`
 			{
 	         "name":"Manikanta",
-			 "age":"21"
-
-			
+			 "age":"21",
+			 "married":"false"
 			}
 	`)	
 
@@ -36,7 +36,16 @@ func PerformPostRequest(){
 
 	defer response.Body.Close();
 
+    //diff things
+	fmt.Println(response.StatusCode)
+	fmt.Println(response.Request.Method)
+	fmt.Println(response.Request.URL)
+	fmt.Println(response.ContentLength)
+	fmt.Println(response.Status)
+	
+
 	content,_:=io.ReadAll(response.Body)
 
 	fmt.Println(string(content))
+	 
 }
