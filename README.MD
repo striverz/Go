@@ -136,3 +136,38 @@ fmt.Printf("The type: %T\n", apiKey)
 ## [Post Request](/21PostRequest/main.go)
 
 ## [Post Form Request](/22PostFormRequest/main.go)
+
+# 🔍 Key Differences: Gorilla Mux vs Chi Router
+
+This document highlights the key differences between **Gorilla Mux** and **Chi** routers in Go.
+
+---
+
+## ⚙️ Comparison Table
+
+| Feature / Concept         | Gorilla Mux 🦍                                     | Chi 🐹                                        | Notes                                             |
+| ------------------------- | -------------------------------------------------- | --------------------------------------------- | ------------------------------------------------- |
+| **Create a router**       | `r := mux.NewRouter()`                             | `r := chi.NewRouter()`                        | Both create a new router instance                 |
+| **Get URL params**        | `mux.Vars(r)["id"]`                                | `chi.URLParam(r, "id")`                       | Chi uses a simpler function call                  |
+| **Register GET route**    | `r.HandleFunc("/path", handler).Methods("GET")`    | `r.Get("/path", handler)`                     | Chi has built-in HTTP method helpers              |
+| **Register POST route**   | `r.HandleFunc("/path", handler).Methods("POST")`   | `r.Post("/path", handler)`                    | Cleaner syntax                                    |
+| **Register PUT route**    | `r.HandleFunc("/path", handler).Methods("PUT")`    | `r.Put("/path", handler)`                     | Consistent style                                  |
+| **Register DELETE route** | `r.HandleFunc("/path", handler).Methods("DELETE")` | `r.Delete("/path", handler)`                  | Consistent style                                  |
+| **Subrouting / grouping** | `r.PathPrefix("/api").Subrouter()`                 | `r.Route("/api", func(r chi.Router) { ... })` | Chi uses function-based grouping                  |
+| **Middleware usage**      | `r.Use(middleware)`                                | `r.Use(middleware)`                           | Same concept, but Chi provides many built-in ones |
+| **Project status**        | ❌ Archived                                        | ✅ Actively maintained                        | Gorilla Mux is no longer maintained               |
+| **Performance**           | Slower (reflection heavy)                          | Faster, lightweight                           | Chi is optimized for speed and memory             |
+
+---
+
+## 🧩 Example Comparison
+
+### Gorilla Mux
+
+```go
+r := mux.NewRouter()
+r.HandleFunc("/course/{id}", getCourse).Methods("GET")
+
+vars := mux.Vars(r)
+id := vars["id"]
+```
