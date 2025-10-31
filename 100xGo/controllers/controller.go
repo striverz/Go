@@ -130,7 +130,11 @@ func CreateMovie(w http.ResponseWriter, r *http.Request){
 	_=json.NewDecoder(r.Body).Decode(&movie)
 	insertOneMovie(movie)
 
-	json.NewEncoder(w).Encode(movie)
+	json.NewEncoder(w).Encode(map[string]interface{}{
+    "message": "Movie is Created",
+    "movie":   movie,
+})
+
 }
 
 
